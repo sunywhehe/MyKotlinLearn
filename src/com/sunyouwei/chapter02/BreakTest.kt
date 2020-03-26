@@ -26,4 +26,12 @@ fun main(args: Array<String>) {
         if (num == 3) continue
         println(num)
     }
+
+    loop@ for (i in 1..100) {
+        println("loop i:" + i)
+        for (j in 1..100) {
+            println("loop j:" + j)
+            if (j == 1) break@loop
+        }
+    }
 }
